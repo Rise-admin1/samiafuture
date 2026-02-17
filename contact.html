@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Samia Future</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(160deg, #f5f4f8 0%, #e8e6f0 100%);
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      background: #1a1a2e;
+      color: #fff;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    header h1 a {
+      color: inherit;
+      text-decoration: none;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+    }
+    nav a:hover {
+      background: rgba(255,255,255,0.1);
+    }
+    main {
+      padding: 2.5rem 1.5rem;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .form-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 24px rgba(26, 26, 46, 0.08);
+    }
+    h2 {
+      margin: 0 0 1.5rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1a1a2e;
+    }
+    form label {
+      display: block;
+      margin-top: 1.25rem;
+      margin-bottom: 0.35rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #374151;
+    }
+    form label:first-of-type {
+      margin-top: 0;
+    }
+    form input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font: inherit;
+      font-size: 1rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      background: #fafafa;
+      transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+    }
+    form input::placeholder {
+      color: #9ca3af;
+    }
+    form input:hover {
+      background: #fff;
+    }
+    form input:focus {
+      outline: none;
+      border-color: #1a1a2e;
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(26, 26, 46, 0.12);
+    }
+    form button {
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 0.85rem 1.5rem;
+      background: #1a1a2e;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font: inherit;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+    form button:hover {
+      background: #252540;
+    }
+    form button:active {
+      transform: scale(0.99);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="index.html">Samia Future</a></h1>
+    <nav>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+  <main>
+    <div class="form-card">
+      <h2>Contact Us</h2>
+      <!-- Replace your@email.com with the address where you want to receive submissions -->
+      <form action="https://formsubmit.co/talktous@samiafuture.com" method="POST">
+        <input type="hidden" name="_subject" value="New contact from Samia Future">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" id="formsubmit-next" value="">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900" required>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </main>
+  <script>
+    (function() {
+      function setSuccessUrl() {
+        var base = location.href.replace(/[^/]+$/, '');
+        var next = document.getElementById('formsubmit-next');
+        if (next) next.value = base + 'success.html';
+      }
+      setSuccessUrl();
+      var form = document.querySelector('form[action*="formsubmit.co"]');
+      if (form) form.addEventListener('submit', setSuccessUrl);
+    })();
+  </script>
+</body>
+</html>
