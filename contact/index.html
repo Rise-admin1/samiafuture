@@ -114,15 +114,14 @@
 </head>
 <body>
   <header>
-    <h1><a href="index.html">Samia Future</a></h1>
+    <h1><a href="../">Samia Future</a></h1>
     <nav>
-      <a href="contact.html">Contact Us</a>
+      <a href="./">Contact Us</a>
     </nav>
   </header>
   <main>
     <div class="form-card">
       <h2>Contact Us</h2>
-      <!-- Replace your@email.com with the address where you want to receive submissions -->
       <form action="https://formsubmit.co/talktous@samiafuture.com" method="POST">
         <input type="hidden" name="_subject" value="New contact from Samia Future">
         <input type="hidden" name="_template" value="table">
@@ -140,9 +139,9 @@
   <script>
     (function() {
       function setSuccessUrl() {
-        var base = location.href.replace(/[^/]+$/, '');
+        var base = location.href.replace(/contact\/?.*$/, '');
         var next = document.getElementById('formsubmit-next');
-        if (next) next.value = base + 'success.html';
+        if (next) next.value = base + 'success/';
       }
       setSuccessUrl();
       var form = document.querySelector('form[action*="formsubmit.co"]');
